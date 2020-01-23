@@ -68,6 +68,8 @@ $(function () {
                 $('html, body').animate({ scrollTop: top }, 750);
             });
         }
+        // URLにアンカー残さない
+        return false;
     });
 
     // 別ページからの遷移スクロールリンク

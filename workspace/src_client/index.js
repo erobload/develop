@@ -1,8 +1,8 @@
 import Vue from "vue";
-import App from "./App";
+import Portal from "./Portal";
 
 new Vue({
-    el: "#app",
-    template: "<App/>",
-    components: { App }
+    el: "#portal",
+    template: "<Portal/>",
+    components: { Portal }
 });

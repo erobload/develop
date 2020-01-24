@@ -1,11 +1,10 @@
 <template>
   <header class="l-header">
     <div class="l-header__wrapper">
-      <div class="u-ml-6 l-header__title">
-        エロゲサイト
-        <br class="sp" />まとめ
-        <br class="sp" />攻略
-      </div>
+      <figure class="u-ml-10 l-header__search js-header__search">
+        <img src="/assets/img/ico_search.png" />
+      </figure>
+      <the-input-search v-model="keyword" />
       <h1>
         <a class="l-header__logo" href="/portal">
           <img src="/assets/img/logo.png" alt="えろげぶろーど" />
@@ -54,5 +53,25 @@
 </template>
 
 <script>
-export default {};
+import TheInputSearch from "./TheInputSearch";
+
+export default {
+  components: {
+    TheInputSearch
+  },
+  props: {
+    input: Event,
+    value: String
+  },
+  computed: {
+    keyword: {
+      get: function() {
+        return this.value;
+      },
+      set: function(value) {
+        this.$emit("input", value);
+      }
+    }
+  }
+};
 </script>

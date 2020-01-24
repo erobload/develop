@@ -1,2 +1,2 @@
-/src_client/jquery.js
-/src_client/lightbox.js
+/src_client/plugin/*.js
+/src_client/vuePagenation.js

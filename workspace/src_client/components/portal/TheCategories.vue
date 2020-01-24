@@ -5,7 +5,7 @@
       v-for="(category, index) in categories"
       :key="index"
     >
-      <category-item :category="category"></category-item>
+      <category-item :category="category" v-model="active"></category-item>
     </li>
   </ul>
 </template>
@@ -17,10 +17,19 @@ export default {
   components: {
     CategoryItem
   },
-  data() {
-    return {};
+  props: {
+    value: Object,
+    input: Event
   },
   computed: {
+    active: {
+      get: function() {
+        return this.value;
+      },
+      set: function(value) {
+        this.$emit("input", value);
+      }
+    },
     categories() {
       return this.testData();
     }
@@ -30,9 +39,9 @@ export default {
     testData() {
       let categories = [];
       for (let i = 1; i < 10; i++) {
-        contents.push({
+        categories.push({
           slug: "category" + i,
-          text: "カテゴリー" + i
+          name: "カテゴリー" + i
         });
       }
 

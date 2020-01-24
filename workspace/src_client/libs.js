@@ -1,8 +1,8 @@
-require("./jquery");
-require("./slick.min");
+require("./plugin/jquery");
+require("./plugin/slick.min");
 
 $(function () {
-
+    
     /* MVスライダー*/
     $('.js-slider.l-header__mv__list').slick({
         infinite: true, //スライドをループさせるか
@@ -26,6 +26,10 @@ $(function () {
             $(this).addClass('-open');
             $('.l-header__container').addClass('-open');
             $('.l-overlay').css('display', 'block');
+
+            /* 検索ボックスを非表示 */
+            $('.js-header__search').removeClass('-open');
+            $('.js-header__search').next().removeClass('-open');
         }
     });
 
@@ -43,6 +47,17 @@ $(function () {
         $('.l-overlay').css('display', 'none');
     });
 
+    /* 検索アイコンクリック時 */
+    $('.js-header__search').click(function () {
+        if ($(this).hasClass('-open')) {
+            $(this).removeClass('-open');
+            $(this).next().removeClass('-open');
+        }
+        else {
+            $(this).addClass('-open');
+            $(this).next().addClass('-open');
+        }
+    });
 
     // function setClassWithScroll(attr_name) {
     //     $(window).scroll(function () {

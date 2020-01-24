@@ -1,5 +1,7 @@
 <template>
-  <input type="text" placeholder="タイトル名検索" v-model="keyword" />
+  <div class="l-header__searchBox">
+    <input type="text" placeholder="タイトル名検索" v-model="keyword" />
+  </div>
 </template>
 
 <script>

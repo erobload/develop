@@ -10,10 +10,53 @@
     z-index: 3;
   }
 
-  &__title {
+  &__search {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    font-size: 9px;
+    justify-content: space-around;
+    width: 30px;
+
+    &::after {
+      @include triangle($direction: top, $size: 12, $color: gray);
+      content: "";
+      margin-top: -17px;
+      transform-origin: 6px 10px;
+      transition: 0.5s;
+    }
+
+    &.-open:after {
+      transform: rotate(180deg);
+    }
+
+    &Box {
+      position: absolute;
+      display: flex;
+      top: 54px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+      visibility: hidden;
+      opacity: 0;
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      @media screen and (min-width: 768px) {
+        top: 58px;
+      }
+    }
+
+    &Box.-open {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__logo {

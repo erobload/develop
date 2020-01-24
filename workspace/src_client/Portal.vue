@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      title: "All",
+      title: "ALL",
       active_keyword: "",
       active_category: { slug: "", name: "" }
     };

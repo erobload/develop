@@ -35,16 +35,21 @@ export default {
   },
   data() {
     return {
-      parPage: 10,
+      content_list: [],
+      parPage: 12,
       currentPage: 1
     };
   },
+  created() {
+    /* コンテンツ取得 */
+    axios.get("/portal/api/contents").then(res => {
+      this.content_list.splice(0, 0, ...res.data);
+    });
+  },
   computed: {
     contents() {
-      let contents = this.testData();
-
       /* 検索フィルタリング */
-      return contents.filter(content => {
+      return this.content_list.filter(content => {
         return (
           content.title.indexOf(this.keyword) != -1 &&
           content.categories.filter(category => {
@@ -56,6 +61,8 @@ export default {
     getContents: function() {
       let current = this.currentPage * this.parPage;
       let start = current - this.parPage;
+
+      /* ペジネーション */
       return this.contents.slice(start, current);
     },
     getPageCount: function() {
@@ -63,19 +70,6 @@ export default {
     }
   },
   methods: {
-    /* テスト用データ作成 */
-    testData() {
-      let contents = [];
-      for (let i = 1; i < 100; i++) {
-        contents.push({
-          title: "フォーリン・ラビリンス-隷属の少女たち- 紹介" + i,
-          time: this.dateFormat(2020, "01", i),
-          categories: ["カテゴリー" + i],
-          brand: "会社" + i
-        });
-      }
-      return contents;
-    },
     dateFormat: function(year, month, date) {
       return `${year}年${month}月${date}`;
     },

@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const apiRoutes = require('./routes/api');
 const debug = require("debug")("myapp:logs");
 // ログで出力する際の色を指定
 debug.color = 2;
 const http = require("http").Server(app);
-const io = require("socket.io")(http);
 const PORT = process.env.PORT || 8080;
 
 /*
@@ -31,9 +31,8 @@ app.use(bodyParser.json());
 
 app.use(express.static("./public"));
 
-io.on('connection', function (socket) {
-    debug('connected');
-});
+// ルーティング設定
+app.use(apiRoutes);
 
 http.listen(PORT, function () {
     debug('listening. Port:' + PORT);

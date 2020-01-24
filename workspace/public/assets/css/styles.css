@@ -1254,9 +1254,9 @@ p {
   display: flex;
   width: 100vw;
   height: 90vw;
-  max-width: 380px;
-  max-height: 360px;
-  margin: 20px;
+  max-width: 400px;
+  max-height: 380px;
+  margin: 20px 10px;
   padding: 0;
   border: none;
   -webkit-box-shadow: 0 0 2px #000;
@@ -1276,6 +1276,16 @@ p {
 
 .p-portal__contents__article {
   color: #000; }
+  .p-portal__contents__article__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
   .p-portal__contents__article__time {
     font-size: 13px; }
 

@@ -1,20 +1,20 @@
 <template>
   <header class="l-header">
     <div class="l-header__wrapper">
-      <figure class="u-ml-10 l-header__search js-header__search">
-        <img src="/assets/img/ico_search.png" />
-      </figure>
-      <the-input-search v-model="keyword" />
-      <h1>
-        <a class="l-header__logo" href="/portal">
-          <img src="/assets/img/logo.png" alt="えろげぶろーど" />
-        </a>
-      </h1>
       <div class="l-header__humburger">
         <span></span>
         <span class="over"></span>
         <span></span>
       </div>
+      <h1>
+        <a class="l-header__logo" href="/portal">
+          <img src="/assets/img/logo.png" alt="えろげぶろーど" />
+        </a>
+      </h1>
+      <figure class="u-mr-10 l-header__search js-header__search">
+        <img src="/assets/img/ico_search.png" />
+      </figure>
+      <the-input-search v-model="keyword" />
     </div>
     <nav class="l-header__container">
       <ul class="l-header__container__list">

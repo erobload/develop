@@ -2,7 +2,7 @@ require("./plugin/jquery");
 require("./plugin/slick.min");
 
 $(function () {
-    
+
     /* MVスライダー*/
     $('.js-slider.l-header__mv__list').slick({
         infinite: true, //スライドをループさせるか
@@ -57,6 +57,12 @@ $(function () {
             $(this).addClass('-open');
             $(this).next().addClass('-open');
         }
+    });
+
+    /* メニュー閉じるボタンクリック時 */
+    $('.js-header__searchClose').click(function () {
+        $('.js-header__search').removeClass('-open');
+        $('.js-header__search').next().removeClass('-open');
     });
 
     // function setClassWithScroll(attr_name) {

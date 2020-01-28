@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, user-scalable=no" name="viewport"/>
+  <meta content="ゆずソフト" name="Keywords"/>
+  <meta content="ゆずソフトのオフィシャルサイトです。" name="Description"/>
+  <title>
+   ゆずソフト｜YUZU SOFT
+  </title>
+  <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="css/yuzu.css" rel="stylesheet" type="text/css"/>
+  <link href="css/meanmenu.css" rel="stylesheet" type="text/css"/>
+  <!-- flexslider -->
+  <link href="css/flexslider.css" rel="stylesheet"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="js/jquery.flexslider-min.js">
+  </script>
+  <script charset="utf-8" type="text/javascript">
+   $(window).load(function() {
+		$('.flexslider').flexslider({
+			directionNav: false,
+			slideshowSpeed: 5000,
+			animationSpeed: 1500,
+			pauseOnAction: false
+		});	});
+  </script>
+  <!-- loopslider -->
+  <link href="css/jquery.simplyscroll.css" rel="stylesheet" type="text/css"/>
+  <script src="js/jquery.simplyscroll.js">
+  </script>
+  <script>
+   (function($){
+	$(function(){
+
+		$('#loopSlide ul').simplyScroll({
+			autoMode: 'loop',
+			speed: 1,
+			frameRate: 24,
+			horizontal: true,
+			pauseOnHover:	true,
+			pauseOnTouch: true
+		});
+		
+	});	
+})(jQuery);
+  </script>
+  <!-- return top -->
+  <script src="js/smoothscroll.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function() {
+	var topBtn = $('#page-top');	
+	topBtn.hide();
+	//スクロールが200に達したらボタン表示
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 200) {
+			topBtn.fadeIn();
+		} else {
+			topBtn.fadeOut();
+		}
+	});
+	//スクロールしてトップ
+    topBtn.click(function () {
+		$('html,body').animate({
+			scrollTop: 0
+		}, 500);
+		return false;
+    });
+});
+  </script>
+  <!-- meanmenu -->
+  <script src="js/jquery.meanmenu.js">
+  </script>
+  <script>
+   $(document).ready(function() {
+$('nav').meanmenu({
+	meanMenuContainer: "#meanmenu", // メニューを表示させる位置
+	});
+});
+  </script>
+  <!-- cookie -->
+  <script src="./cookie/jquery.cookie.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function(){
+		if($.cookie("caution") == 'yes'){
+			$('#caution').css({display:'none'});
+		}
+		$(window).load(function(){
+			$('body').addClass('access');
+		})
+	});
+  </script>
+  <script type="text/javascript">
+   $(function () {
+	  $(".btn-yes").on('click',function() {
+      $.cookie("caution","yes",{ expires: 30 });
+      $("#caution").fadeOut(500);
+	  });
+    $(".btn-no").on('click',function() {
+      location.href = "https://www.google.co.jp";
+    });
+	});
+  </script>
+ </head>
+ <body>
+  <!-- header -->
+  <div id="header-base">
+   <div id="header">
+    <div id="logo">
+     <a href="index.html">
+      <img alt="ゆずソフト" src="images/common/logo.png"/>
+     </a>
+    </div>
+    <!-- social link -->
+    <div id="social">
+     <ul>
+      <li>
+       <a href="http://line.me/R/msg/text/?http://yuzu-soft.com" onclick="window.open(this.href, 'Gwindow', 'width=550, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+        <img alt="google" src="images/common/icon-line.png"/>
+       </a>
+      </li>
+      <li>
+       <a href="http://www.facebook.com/share.php?u=http://yuzu-soft.com" onclick="window.open(this.href,'facebookwindow','width=550,height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1'); return false;">
+        <img alt="facebook" src="images/common/icon-fb.png"/>
+       </a>
+      </li>
+      <li>
+       <a href="http://twitter.com/share?count=horizontal&amp;original_referer=http://yuzu-soft.com&amp;text=YUZU SOFT&amp;url=http://yuzu-soft.com" onclick="window.open(this.href, 'tweetwindow', 'width=550, height=450,personalbar=0,toolbar=0,scrollbars=1,resizable=1'); return false;">
+        <img alt="twitter" src="images/common/icon-tw.png"/>
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- /social link -->
+   </div>
+  </div>
+  <!-- /header -->
+  <!-- navi -->
+  <div id="meanmenu">
+   <nav>
+    <ul>
+     <li class="navi01">
+      <a href="products.html">
+       PRODUCTS｜製品情報
+      </a>
+     </li>
+     <li class="navi02">
+      <a href="http://yuzulog.hatenablog.com/" target="_blank">
+       STAFF BLOG｜スタッフブログ
+      </a>
+     </li>
+     <li class="navi03">
+      <a href="goods.html">
+       GOODS｜関連グッズ
+      </a>
+     </li>
+     <li class="navi04">
+      <a href="http://ec-russell.jp/yuz/rating/" target="_blank">
+       WEB SHOP｜WEB通販
+      </a>
+     </li>
+     <li class="navi05">
+      <a href="support.html">
+       SUPPORT｜サポート＆お問い合わせ
+      </a>
+     </li>
+     <li class="navi06">
+      <a href="recruit.html">
+       RECRUIT｜採用情報
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </div>
+  <!-- /navi -->
+  <!-- contents -->
+  <div id="wrapper">
+   <h2 class="midashi01">
+    製品情報
+   </h2>
+   <div id="s-navi">
+    <ul>
+     <li>
+      <a href="products.html">
+       ＰＣソフト
+      </a>
+     </li>
+     <li>
+      <a href="products_cd.html">
+       音楽ＣＤ
+      </a>
+     </li>
+     <li>
+      <a href="products_book.html">
+       書籍
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_rj.jpg"/>
+    </div>
+    <div class="name">
+     【RIDDLE JOKER】
+    </div>
+    <div class="name2">
+     ジャンル：ADV
+    </div>
+    <div>
+     <a href="products/riddle/index.html" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2018年3月30日
+     <br/>
+     価格：￥8,800（+tax）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/feature/yuzusoft/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_sb.jpg"/>
+    </div>
+    <div class="name">
+     【千恋＊万花】
+    </div>
+    <div class="name2">
+     ジャンル：ADV
+    </div>
+    <div>
+     <a href="products/senren/index.html" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2016年7月29日
+     <br/>
+     価格：￥8,800（+tax）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/feature/yuzusoft/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_sw.jpg"/>
+    </div>
+    <div class="name">
+     【サノバウィッチ】
+    </div>
+    <div class="name2">
+     ジャンル：お悩み解決！魔女っ子ADV
+    </div>
+    <div>
+     <a href="products/sothewitch/index.html" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2015年2月24日
+     <br/>
+     価格：￥8,800（+tax）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0148/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_am.jpg"/>
+    </div>
+    <div class="name">
+     【天色＊アイルノーツ】
+    </div>
+    <div class="name2">
+     ジャンル：青空に浮かぶ島で過ごすイチャラブ恋愛ADV
+    </div>
+    <div>
+     <a href="http://www.yuzu-soft.com/ja/amairo.html" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2013年7月26日
+     <br/>
+     価格：￥8,800（+tax）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0164/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_dr.jpg"/>
+    </div>
+    <div class="name">
+     【DRACU-RIOT!】
+    </div>
+    <div class="name2">
+     ジャンル：トキメキバンパイアADV
+    </div>
+    <div>
+     <a href="http://www.yuzu-soft.com/ja/dracuriot.html" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2012年3月30日
+     <br/>
+     価格：￥8,800（+tax）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0169/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_nw.jpg"/>
+    </div>
+    <div class="name">
+     【のーぶる☆わーくす】
+    </div>
+    <div class="name2">
+     ジャンル：お嬢様と過ごすなりきりセレブADV
+    </div>
+    <div>
+     <a href="http://legacy.yuzu-soft.com/nw/" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2010年12月24日
+     <br/>
+     ￥8,800(+tax)
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0170/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/tt.jpg"/>
+    </div>
+    <div class="name">
+     【天神乱漫】
+    </div>
+    <div class="name2">
+     ジャンル：神様と過ごすドタバタ学園ADV
+    </div>
+    <div>
+     <a href="http://legacy.yuzu-soft.com/tenshin/" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2009年5月29日
+     <br/>
+     ￥8,800(+tax)
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0171/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_nk.jpg"/>
+    </div>
+    <div class="name">
+     【夏空カナタ】
+    </div>
+    <div class="name2">
+     ジャンル：海と空のＡＤＶ
+    </div>
+    <div>
+     <a href="http://legacy.yuzu-soft.com/natsu/" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2008年5月23日
+     <br/>
+     DL版 価格：￥2,700(taxin)
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0132/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_ee.jpg"/>
+    </div>
+    <div class="name">
+     【Ｅ×Ｅ（エグゼ）】
+    </div>
+    <div class="name2">
+     ジャンル：学園バトルＡＤＶ
+    </div>
+    <div>
+     <a href="http://legacy.yuzu-soft.com/exe/" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2007年6月1日
+     <br/>
+     DL版 価格：￥2,700(taxin)
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0130/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+   <div class="item-frame">
+    <div class="pic">
+     <img src="images/products/pr_bb.jpg"/>
+    </div>
+    <div class="name">
+     【ぶらばん！廉価版】
+    </div>
+    <div class="name2">
+     ジャンル：学園音楽ライフ満喫ＡＤＶ
+    </div>
+    <div>
+     <a href="http://legacy.yuzu-soft.com/buraban/" target="_blank">
+      作品のWEBサイトへ
+     </a>
+     <br/>
+     発売日：2008年5月23日
+     <br/>
+     価格：￥2,700（taxin）
+     <br/>
+     <a href="http://dlsoft.dmm.co.jp/detail/russ_0072/ab=dGwllQSF6d/" target="_blank">
+      DMMで購入。
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- /contents -->
+  <!-- footer -->
+  <div id="footer-base">
+   <div class="footer">
+    © 2019 YUZUSOFT/JUNOS inc. all rights reserved.
+    <br/>
+    <a href="privacy.html">
+     著作権に関するガイドライン
+    </a>
+    /
+    <a href="parsonal.html">
+     個人情報保護に関する事項
+    </a>
+    ※当サイトは18歳未満の方の閲覧を禁止しています。
+   </div>
+  </div>
+  <div id="page-top">
+   ページTOPへ戻る
+  </div>
+  <!-- /footer -->
+ </body>
+</html>

@@ -1,5 +1,5 @@
 <template>
-  <a class="p-portal__contents__item__link">
+  <a class="p-portal__contents__item__link" :href="content.link">
     <figure class="p-portal__contents__item__thumb c-section__item__thumb">
       <img :src="content.image_path" :alt="content" />
     </figure>

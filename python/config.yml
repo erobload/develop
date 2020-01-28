@@ -1,0 +1,49 @@
+targets:
+  -
+    status: true  # trueならスクレイピング対象
+    name: akabeesoft3
+    url: 'http://www.akabeesoft3.com/products.html'
+    root: 'http://www.akabeesoft3.com'
+    params:
+      - brand: 'あかべぇそふと3'
+      - categories: [ '美少女ゲーム', 'あかべぇそふと3' ]
+    contents:
+      - 
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box > h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.pk_img > a > img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_data > ul > li:nth-child(1) > a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: yuzusoft
+    url: 'http://www.yuzu-soft.com/products.html'
+    root: 'http://www.yuzu-soft.com'
+    params:
+      - brand: 'ゆずソフト'
+      - categories: [ '美少女ゲーム', 'ゆずソフト' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.item-frame .name'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.item-frame img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.item-frame > div > a:nth-child(1)'

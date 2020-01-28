@@ -21,6 +21,22 @@ export default {
     value: Object,
     input: Event
   },
+  data() {
+    return {
+      category_list: [{ slug: "ALL", name: "ALL" }]
+    };
+  },
+  created() {
+    /* カテゴリー取得 */
+    axios.get("/portal/api/category").then(res => {
+      for (const data of res.data) {
+        this.category_list.push({
+          slug: data.categories,
+          name: data.categories
+        });
+      }
+    });
+  },
   computed: {
     active: {
       get: function() {
@@ -31,21 +47,7 @@ export default {
       }
     },
     categories() {
-      return this.testData();
-    }
-  },
-  methods: {
-    /* テスト用データ作成 */
-    testData() {
-      let categories = [];
-      for (let i = 1; i < 10; i++) {
-        categories.push({
-          slug: "category" + i,
-          name: "カテゴリー" + i
-        });
-      }
-
-      return categories;
+      return this.category_list;
     }
   }
 };

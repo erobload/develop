@@ -1284,9 +1284,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  height: 90vw;
   max-width: 400px;
-  max-height: 380px;
   margin: 20px 10px;
   padding: 0;
   border: none;
@@ -1298,8 +1296,7 @@ p {
     .p-portal__contents__item__link:focus, .p-portal__contents__item__link:hover {
       text-decoration: none; }
   .p-portal__contents__item__thumb {
-    width: 100%;
-    height: 70%; }
+    width: 100%; }
     .p-portal__contents__item__thumb img {
       display: block;
       height: 100%;
@@ -1317,6 +1314,11 @@ p {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end; }
+  .p-portal__contents__article__title {
+    font-size: 4vw; }
+    @media screen and (min-width: 768px) {
+      .p-portal__contents__article__title {
+        font-size: 16px; } }
   .p-portal__contents__article__time {
     font-size: 13px; }
 
@@ -1358,10 +1360,7 @@ p {
         padding: 15px;
         font-size: 16px; } }
 
-.p-portal__paginate__item.active a {
-  background-color: red; }
-
-.pagination {
+.p-portal__paginate {
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1375,12 +1374,14 @@ p {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 30px 20px; }
-  .pagination:first-child, .pagination:last-child {
+  .p-portal__paginate:first-child, .p-portal__paginate:last-child {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     outline: none; }
+  .p-portal__paginate__item.active a {
+    background-color: red; }
 
 /* Cssライブラリモジュール */
 .slick-dots li button:before {

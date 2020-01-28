@@ -36,6 +36,9 @@ export default {
       active_category: { slug: "", name: "" }
     };
   },
+  mounted(){
+    console.log(store)
+  },
   computed: {
     category: {
       get: function() {

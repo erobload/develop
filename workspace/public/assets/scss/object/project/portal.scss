@@ -14,9 +14,7 @@
     &__item {
       display: flex;
       width: 100vw;
-      height: 90vw;
       max-width: 400px;
-      max-height: 380px;
       margin: 20px 10px;
       padding: 0;
       border: none;
@@ -33,7 +31,6 @@
 
       &__thumb {
         width: 100%;
-        height: 70%;
         img {
           display: block;
           height: 100%;
@@ -49,6 +46,14 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+      }
+
+      &__title {
+        font-size: 4vw;
+
+        @media screen and (min-width: 768px) {
+          font-size: 16px;
+        }
       }
 
       &__time {
@@ -107,23 +112,24 @@
     }
   }
 
-  &__paginate__item.active {
-    a {
-      background-color: red;
-    }
-  }
-}
-.pagination {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px 20px;
+  &__paginate {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 20px;
 
-  &:first-child,
-  &:last-child {
-    user-select: none;
-    outline: none;
+    &:first-child,
+    &:last-child {
+      user-select: none;
+      outline: none;
+    }
+
+    &__item.active {
+      a {
+        background-color: red;
+      }
+    }
   }
 }

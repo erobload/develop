@@ -4,7 +4,7 @@ class Mongo():
     
     def __init__(self, db_name, collection__name):
         #mongodb へのアクセスを確立
-        client = pymongo.MongoClient('mongo', 27017)
+        client = pymongo.MongoClient('0.0.0.0', 27017)
 
         # データベースを作成
         db = client[db_name]

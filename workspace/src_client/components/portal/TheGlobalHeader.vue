@@ -8,11 +8,11 @@
       </div>
       <h1>
         <a class="l-header__logo" href="/portal">
-          <img src="/assets/img/logo.png" alt="えろげぶろーど" />
+          <img src="/portal/assets/img/logo.png" alt="えろげぶろーど" />
         </a>
       </h1>
       <figure class="u-mr-10 l-header__search js-header__search">
-        <img src="/assets/img/ico_search.png" />
+        <img src="/portal/assets/img/ico_search.png" />
       </figure>
       <the-input-search v-model="keyword" />
     </div>

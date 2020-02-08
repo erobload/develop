@@ -66,7 +66,6 @@ export default {
     getContents: function() {
       let current = this.currentPage * store.data.parPage;
       let start = current - store.data.parPage;
-      console.log(start);
 
       /* ペジネーション */
       return this.contents.slice(start, current);
@@ -82,7 +81,6 @@ export default {
     clickCallback: function(pageNum) {
       store.data.currentPage = Number(pageNum);
       this.currentPage = Number(pageNum);
-      console.log("click");
     }
   }
 };

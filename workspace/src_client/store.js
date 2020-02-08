@@ -3,4 +3,4 @@ module.exports = {
         parPage: 12,
         currentPage: 1
     },
-}
+};

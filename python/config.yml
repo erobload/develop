@@ -47,3 +47,196 @@ targets:
         elem: 'link'
         type: 'href'
         selector: '.item-frame > div > a:nth-child(1)'
+
+  -
+    status: true  # trueならスクレイピング対象
+    name: alicesoft
+    url: 'https://www.alicesoft.com/game/normal/'
+    root: 'https://www.alicesoft.com'
+    params:
+      - brand: 'アリスソフト'
+      - categories: [ '美少女ゲーム', 'アリスソフト' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.soft-list .title'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.soft-list img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.soft-list a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: akabee2
+    url: 'http://www.akabeesoft2.com/product.html'
+    root: 'http://www.akabeesoft2.com'
+    params:
+      - brand: 'あかべぇそふと2'
+      - categories: [ '美少女ゲーム', 'あかべぇそふと2' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_box .pk_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box li:nth-child(1) a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: akatsukiworks
+    url: 'http://www.akatsukiworks.com/products.html'
+    root: 'http://www.akatsukiworks.com'
+    params:
+      - brand: '暁WORKS'
+      - categories: [ '美少女ゲーム', '暁WORKS' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box li:nth-child(1) a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: applique-soft
+    url: 'http://www.applique-soft.com/seihin.html'
+    root: 'http://www.applique-soft.com'
+    params:
+      - brand: 'あっぷりけ'
+      - categories: [ '美少女ゲーム', 'あっぷりけ' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.seihin_box h1'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.seihin_box .seihin_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.seihin_box .seihin_img a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: cosmiccute
+    url: 'http://www.cosmiccute.com/products.html'
+    root: 'http://www.cosmiccute.com'
+    params:
+      - brand: 'COSMIC CUTE'
+      - categories: [ '美少女ゲーム', 'COSMIC CUTE' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.products_contents h3'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.products_contents .products_contents_img img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.products_contents .products_contents_img a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: hibiki-site
+    url: 'http://www.hibiki-site.com/product.html'
+    root: 'http://www.hibiki-site.com'
+    params:
+      - brand: 'hibiki works'
+      - categories: [ '美少女ゲーム', 'hibiki works' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.prod_box h2'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.prod_box .pkg img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.prod_box .pkg a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: sprite
+    url: 'https://sprite.org/products/'
+    root: 'https://sprite.org'
+    params:
+      - brand: 'sprite / S-WORKS'
+      - categories: [ '美少女ゲーム', 'sprite / S-WORKS' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'text'
+        selector: '.entrylist .fadeover li .text'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '.entrylist .fadeover li .image img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '.entrylist .fadeover li a'
+  -
+    status: true  # trueならスクレイピング対象
+    name: at-sakura
+    url: 'http://www.at-sakura.net/ntr/'
+    root: 'http://www.at-sakura.net'
+    params:
+      - brand: 'アトリエさくら'
+      - categories: [ 'アトリエさくら' ]
+    contents:
+      -
+        #タイトル
+        elem: 'title'
+        type: 'alt'
+        selector: '#article ul li img'
+      - 
+        #画像URL
+        elem: 'image_path'
+        type: 'src'
+        selector: '#article ul li img'
+      - 
+        #公式リンク
+        elem: 'link'
+        type: 'href'
+        selector: '#article ul li a'

@@ -100,12 +100,14 @@
     flex-direction: column;
     width: 50px;
     padding: 17px 12px 9px;
+    visibility: hidden !important;
 
     & > span {
       display: inline-block;
       width: 100%;
       border-top: 2px solid $main-color;
       transition: 0.5s;
+      visibility: hidden !important;
     }
     .over {
       visibility: visible;

@@ -688,14 +688,16 @@ p {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 50px;
-  padding: 17px 12px 9px; }
+  padding: 17px 12px 9px;
+  visibility: hidden !important; }
   .l-header__humburger > span {
     display: inline-block;
     width: 100%;
     border-top: 2px solid orange;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
-    transition: 0.5s; }
+    transition: 0.5s;
+    visibility: hidden !important; }
   .l-header__humburger .over {
     visibility: visible;
     opacity: 1;
@@ -1299,7 +1301,6 @@ p {
     width: 100%; }
     .p-portal__contents__item__thumb img {
       display: block;
-      height: 100%;
       margin: 0 auto; }
 
 .p-portal__contents__article {
@@ -1334,31 +1335,22 @@ p {
   background: transparent; }
 
 .p-portal__category__item {
-  margin: 2px;
+  margin: 10px 5px;
   padding: 0;
   border: none; }
 
 .p-portal__category__link {
-  padding: 4px 8px; }
+  padding: 4px 8px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 .p-portal__category__link.-active {
   background-color: darkorchid; }
 
-.p-portal__paginate__item {
-  margin: 2%; }
-  .p-portal__paginate__item.disabled a {
-    cursor: auto;
-    text-decoration: none; }
-  .p-portal__paginate__item a {
-    padding: 3px 10px;
-    border: 1px solid #000;
-    font-size: 3.2vw; }
-    .p-portal__paginate__item a:hover, .p-portal__paginate__item a:focus {
-      opacity: 1; }
-    @media screen and (min-width: 768px) {
-      .p-portal__paginate__item a {
-        padding: 15px;
-        font-size: 16px; } }
+@media screen and (min-width: 768px) {
+  .p-portal__category__link:hover {
+    background-color: darkorchid; } }
 
 .p-portal__paginate {
   margin: auto;
@@ -1380,8 +1372,32 @@ p {
     -ms-user-select: none;
     user-select: none;
     outline: none; }
-  .p-portal__paginate__item.active a {
-    background-color: red; }
+  .p-portal__paginate__item {
+    margin: 4% 2%; }
+    .p-portal__paginate__item.disabled a {
+      cursor: auto;
+      text-decoration: none; }
+    .p-portal__paginate__item a {
+      color: #000;
+      padding: 10px 15px;
+      font-size: 3.2vw;
+      border: transparent;
+      -webkit-box-shadow: 0 0 3px #000;
+      box-shadow: 0 0 3px #000;
+      text-decoration: none;
+      outline: none; }
+      .p-portal__paginate__item a:hover, .p-portal__paginate__item a:focus {
+        opacity: 1; }
+    .p-portal__paginate__item.active a {
+      background-color: orange;
+      color: #fff; }
+    @media screen and (min-width: 768px) {
+      .p-portal__paginate__item a {
+        padding: 15px;
+        font-size: 16px; }
+      .p-portal__paginate__item:hover:not(.disabled) a {
+        background-color: orange;
+        color: #fff; } }
 
 /* Cssライブラリモジュール */
 .slick-dots li button:before {

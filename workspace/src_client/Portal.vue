@@ -33,11 +33,8 @@ export default {
     return {
       title: "ALL",
       active_keyword: "",
-      active_category: { slug: "", name: "" }
+      active_category: { slug: "ALL", name: "ALL" }
     };
-  },
-  mounted(){
-    console.log(store)
   },
   computed: {
     category: {

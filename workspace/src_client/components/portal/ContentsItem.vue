@@ -7,13 +7,9 @@
       <p>
         <span
           class="p-portal__category__link c-section__article__category"
-        >{{ content.categories[0] }}</span>
-        <span
-          class="p-portal__category__link c-section__article__category"
-        >{{ content.categories[1] }}</span>
-        <span
-          class="p-portal__category__link c-section__article__category"
-        >{{ content.categories[2] }}</span>
+          v-for="(category, index) in content.categories"
+          :key="index"
+        >{{ content.categories[index] }}</span>
       </p>
       <div class="p-portal__contents__article__header c-section__article__header">
         <h3 class="p-portal__contents__article__title c-section__article__title">{{ content.title }}</h3>
